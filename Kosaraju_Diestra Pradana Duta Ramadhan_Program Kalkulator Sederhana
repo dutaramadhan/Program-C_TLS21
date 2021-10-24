@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    double bil1,bil2,hasil;
+    int pil,bil_mod_1,bil_mod_2;
+   
+    
+    cout<<"Program Kalkulator Sederhana"<<endl;
+
+    cout<<"Pilih nomor operasi yang Anda inginkan"<<endl;
+    cout<<"1. Penjumlahan"<<endl;
+    cout<<"2. Pengurangan"<<endl;
+    cout<<"3. Perkalian"<<endl;
+    cout<<"4. Pembagian"<<endl;
+    cout<<"5. Modulus"<<endl;
+    
+    cout<<"Masukan pilihan Anda: ";
+    cin>>pil;
+    
+    if(pil==5){
+    cout<<"Masukan bilangan pertama Anda: ";
+    cin>>bil_mod_1;
+    cout<<"Masukan bilangan kedua Anda: ";
+    cin>>bil_mod_2;
+    
+    hasil=bil_mod_1%bil_mod_2;
+    cout<<"Hasil dari operasi modulus tersebut adalah "<<hasil<<endl;
+    }
+    else{
+    cout<<"Masukan bilangan yang pertama: ";
+    cin>>bil1;
+    cout<<"Masukan bilangan yang kedua: ";
+    cin>>bil2;
+    
+    switch(pil){
+        case 1 : hasil=bil1+bil2;
+        cout<<"Hasil dari operasi penjumlahan tersebut adalah "<<hasil<<endl;
+        break;
+        
+        case 2 : hasil=bil1-bil2;
+        cout<<"Hasil dari operasi pengurangan tersebut adalah "<<hasil<<endl;
+        break;
+        
+        case 3 : hasil=bil1*bil2;
+        cout<<"Hasil dari operasi perkalian tersebut adalah "<<hasil<<endl;
+        break;
+        
+        case 4 : hasil=bil1/bil2;
+        cout<<"Hasil dari operasi pembagian tersebut adalah "<<hasil<<endl;
+        break;
+        
+        default :
+			cout<<"Anda Salah Memasukan Operator"<<endl;
+    }
+    }
+    return 0;
+}
+
